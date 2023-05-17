@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
+import Navbar from "app/(shared)/Navbar";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -15,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={openSans.className}>{children}</body>
+      <body className={openSans.className}>
+        <Navbar />
+        {children}
+        {/* <Footer /> */}
+      </body>
     </html>
   );
 }
