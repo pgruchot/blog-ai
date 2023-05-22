@@ -26,7 +26,8 @@ export async function POST(request: Request, response: any) {
           },
         ],
       });
-    response.revalidate("/api/posts");
+
+    //response.revalidate("/api/posts");
     return NextResponse.json(
       { content: airesponse.data.choices[0].message?.content },
       { status: 200 }
