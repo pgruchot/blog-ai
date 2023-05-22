@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../client";
 
 type Params = { params: { id: string } };
+
 export async function PATCH(request: Request, { params }: Params) {
   try {
     const { id } = params;
